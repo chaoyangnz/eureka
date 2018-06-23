@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: eureka
+
+server:
+  port: ${EUREKA_PORT:8761}
+
+eureka:
+  environment: ${EUREKA_ENVIRONMENT:dev}
+  instance:
+    hostname: ${EUREKA_HOST_NAME:localhost}
+  server:
+    eviction-interval-timer-in-ms: 1000
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
