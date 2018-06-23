@@ -11,7 +11,8 @@ This server is based on Spring Cloud subproject for Eureka Server and built in s
 docker run -it chaoyangnz/eureka \
     -e EUREKA_PORT=8761 \
     -e EUREKA_ENVIRONMENT=prod \
-    -e EUREKA_HOST_NAME=localhost
+    -e EUREKA_HOST_NAME=localhost \
+    -e CONFIG_SERVER_URL=http://localhost:8888
 ```
 
 # Docker hub
